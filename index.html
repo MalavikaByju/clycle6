@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clycle | Campus Buy & Sell Platform for Peer-to-Peer Exchange</title>
     <meta name="description" content="Join Clycle, the trusted student marketplace designed for peer-to-peer student exchange. Buy, sell, rent, and trade affordable campus essentials including textbooks, clothing, and electronics. Support the campus circular economy with sustainable, secondhand goods and a secure, student-to-student trading platform.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon2.png">
-    
 
+    <!-- Preload and asynchronously load CSS -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+    <!-- Preconnect to speed up font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="assets/icon2.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon2.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/icon2.png" class="logo-img">
+                <img src="assets/icon2.png" class="logo-img" alt="Clycle logo">
                 <a href="index.html" class="logo">Clycle</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
@@ -195,6 +204,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- Defer JS so it doesn't block render -->
+    <script src="app.js" defer></script>
 </body>
 </html>
